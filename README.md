@@ -1,4 +1,4 @@
-# Ethereum Smart Contract Boilerplate
+# Smart Contract Boilerplate for Agents
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Foundry](https://img.shields.io/badge/Foundry-Compatible-brightgreen)
@@ -6,23 +6,24 @@
 
 ## Description
 
-This repository provides a robust boilerplate for Ethereum smart contract development. It is built using [Foundry](https://book.getfoundry.sh/), a blazing fast, portable, and modular toolkit for Ethereum application development. The boilerplate includes:
+This repository provides a robust boilerplate for agents to call, deploy, and interact with smart contracts. It is built using [Foundry](https://book.getfoundry.sh/), a blazing fast, portable, and modular toolkit for Ethereum application development. The boilerplate includes:
 
 - Standard implementations for various contract types (e.g., ERC-20, ERC-721, custom contracts).
 - Pre-configured testing environment.
 - Integration with OpenZeppelin Contracts.
 - Scripts for deployment and interaction.
 
-This boilerplate is ideal for developers looking to kickstart their Ethereum projects with a reliable and well-structured foundation.
+This boilerplate is ideal for developers and agents looking to kickstart their blockchain projects with a reliable and well-structured foundation.
 
 ---
 
 ## Table of Contents
 
-- [Ethereum Smart Contract Boilerplate](#ethereum-smart-contract-boilerplate)
+- [Smart Contract Boilerplate for Agents](#smart-contract-boilerplate-for-agents)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
+  - [How Agents Can Use the Contracts](#how-agents-can-use-the-contracts)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
@@ -32,7 +33,6 @@ This boilerplate is ideal for developers looking to kickstart their Ethereum pro
     - [Format](#format)
     - [Gas Snapshots](#gas-snapshots)
     - [Deploy](#deploy)
-  - [How Agents Can Use the ERC-20 Contract](#how-agents-can-use-the-erc-20-contract)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -45,6 +45,24 @@ This boilerplate is ideal for developers looking to kickstart their Ethereum pro
 - **OpenZeppelin Integration**: Leverages OpenZeppelin's battle-tested contracts.
 - **Deployment Scripts**: Ready-to-use scripts for deploying contracts.
 - **Gas Optimization**: Tools for analyzing and optimizing gas usage.
+
+---
+
+## How Agents Can Use the Contracts
+
+This boilerplate is designed for agents to easily interact with and deploy smart contracts. Here are some key use cases:
+
+1. **Contract Deployment**: Agents can deploy various types of contracts (e.g., ERC-20, ERC-721) with customizable parameters.
+
+2. **Programmatic Interaction**: Agents can call contract functions to perform operations such as token transfers, approvals, and more.
+
+3. **Extensibility**: Agents can extend the provided contracts to add custom functionality tailored to specific use cases.
+
+4. **Testing and Validation**: Agents can use the pre-configured test suite to validate contract behavior before deployment.
+
+5. **Integration with Applications**: Agents can integrate these contracts into decentralized applications (DApps) to enable token-based functionalities, governance, or other blockchain features.
+
+For detailed examples and usage instructions, refer to the [ERC-20.md](ERC-20.md) file.
 
 ---
 
@@ -62,12 +80,12 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/Ethereum-Boilerplate.git
+   git clone https://github.com/your-repo/Agent-Contracts-Boilerplate.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd Ethereum-Boilerplate
+   cd Agent-Contracts-Boilerplate
    ```
 
 3. Install dependencies:
@@ -108,24 +126,6 @@ forge snapshot
 ```bash
 forge script script/Deploy.s.sol:DeployScript --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
-
----
-
-## How Agents Can Use the ERC-20 Contract
-
-The ERC-20 contract provided in this boilerplate is designed to be modular and extensible, making it easy for agents to integrate and interact with. Here are some ways agents can use the contract:
-
-1. **Token Deployment**: Agents can deploy the ERC-20 contract to create their own fungible tokens with customizable parameters such as name, symbol, and initial supply.
-
-2. **Interfacing with Tokens**: Agents can use the contract's standard ERC-20 functions (e.g., `transfer`, `approve`, `transferFrom`) to interact with tokens programmatically.
-
-3. **Extending Functionality**: Agents can inherit from the base ERC-20 contract to add custom features such as minting, burning, or access control mechanisms.
-
-4. **Testing and Simulation**: The boilerplate includes a comprehensive test suite that agents can use to simulate token interactions and validate contract behavior before deployment.
-
-5. **Integration with DApps**: Agents can integrate the ERC-20 contract with decentralized applications (DApps) to enable token-based functionalities such as payments, staking, or governance.
-
-For detailed examples and usage instructions, refer to the [ERC-20.md](ERC-20.md) file.
 
 ---
 
